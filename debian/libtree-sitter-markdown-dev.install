@@ -1,0 +1,4 @@
+usr/include/tree_sitter/tree-sitter-markdown.h
+usr/lib/*/libtree-sitter-markdown.a
+usr/lib/*/libtree-sitter-markdown.so
+usr/lib/*/pkgconfig/tree-sitter-markdown.pc

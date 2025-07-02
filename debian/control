@@ -1,0 +1,65 @@
+Source: tree-sitter-markdown
+Section: libs
+Priority: optional
+Maintainer: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Homepage: https://github.com/tree-sitter-grammars/tree-sitter-markdown
+Vcs-Browser: https://github.com/dimitry-ishenko-neovim/tree-sitter-markdown
+Vcs-Git: https://github.com/dimitry-ishenko-neovim/tree-sitter-markdown.git
+
+Package: libtree-sitter-markdown
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Markdown grammar for tree-sitter
+ tree-sitter-markdown is a Markdown language grammar for tree-sitter. It
+ enables syntax highlighting, structural editing, incremental parsing, and code
+ analysis in editors and tools.
+ .
+ This package contains the Markdown shared library.
+
+Package: libtree-sitter-markdown-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ libtree-sitter-markdown (= ${binary:Version})
+ ${misc:Depends},
+Description: Markdown grammar for tree-sitter
+ tree-sitter-markdown is a Markdown language grammar for tree-sitter. It
+ enables syntax highlighting, structural editing, incremental parsing, and code
+ analysis in editors and tools.
+ .
+ This package contains Markdown development files.
+
+Package: libtree-sitter-markdown-inline
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Inline Markdown grammar for tree-sitter
+ tree-sitter-markdown-inline is an inline Markdown language grammar for
+ tree-sitter. It enables syntax highlighting, structural editing, incremental
+ parsing, and code analysis in editors and tools.
+ .
+ This package contains the inline Markdown shared library.
+
+Package: libtree-sitter-markdown-inline-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ libtree-sitter-markdown-inline (= ${binary:Version})
+ ${misc:Depends},
+Description: Inline Markdown grammar for tree-sitter
+ tree-sitter-markdown-inline is an inline Markdown language grammar for
+ tree-sitter. It enables syntax highlighting, structural editing, incremental
+ parsing, and code analysis in editors and tools.
+ .
+ This package contains inline Markdown development files.

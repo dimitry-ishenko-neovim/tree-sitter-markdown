@@ -1,0 +1,16 @@
+Description: Don't regenerate grammar.js
+ It requires the tree-sitter binary, which we don't have.
+Author: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+---
+--- tree-sitter-markdown-0.5.0.orig/common/common.mak
++++ tree-sitter-markdown-0.5.0/common/common.mak
+@@ -66,9 +66,6 @@ $(LANGUAGE_NAME).pc: bindings/c/$(LANGUA
+ 		-e 's|@CMAKE_INSTALL_PREFIX@|$(PREFIX)|' \
+ 		-e 's|@TS_REQUIRES@|$(REQUIRES)|' $< > $@
+ 
+-$(PARSER): $(SRC_DIR)/grammar.js
+-	$(TS) generate $^
+-
+ install: all
+ 	install -Dm644 bindings/c/$(LANGUAGE_NAME).h '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter/$(LANGUAGE_NAME).h
+ 	install -Dm644 $(LANGUAGE_NAME).pc '$(DESTDIR)$(PCLIBDIR)'/$(LANGUAGE_NAME).pc
