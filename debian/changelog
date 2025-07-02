@@ -1,5 +1,14 @@
-tree-sitter-markdown (0.5.0-1) UNRELEASED; urgency=medium
+tree-sitter-markdown (0.5.0-1) unstable; urgency=medium
 
-  * Initial release.
+  [ Dimitry Ishenko ]
+  * Add Debian packaging
 
- -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 02 Jul 2025 10:45:00 -0400
+  [ Christian Clason ]
+  * release v0.5.0
+  * ci(release): add workflow
+  * ci(test): update workflow
+
+  [ 林玮 (Jade Lin) ]
+  * fix(npm): include tree-sitter config file (#187)
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 02 Jul 2025 11:23:21 -0400
